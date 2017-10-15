@@ -60,4 +60,16 @@ public class StringCalculatorTest{
 		assertEquals(10, calc.Add("5\n1\n4"));
 	}
 
+	// Testing space beetween values
+	@Test
+	public void addThreeNumbersSpace1(){
+		StringCalculator calc = new StringCalculator();
+		assertEquals(9, calc.Add("1 2 4"));
+	}
+	@Test
+	public void addThreeNumbersSpace2(){
+		StringCalculator calc = new StringCalculator();
+		assertEquals(9, calc.Add("5\n1 4,2"));
+	}
+
 }
