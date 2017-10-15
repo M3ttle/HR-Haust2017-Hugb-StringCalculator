@@ -106,7 +106,7 @@ public class StringCalculatorTest{
 		  }
 		  catch(final IllegalArgumentException e)
 		  {
-		    assertEquals("Negatives not allowed: -4,-6", e.getMessage());
+		    assertEquals("Negatives not allowed: -4,-5", e.getMessage());
 		  }
 	}
 }
