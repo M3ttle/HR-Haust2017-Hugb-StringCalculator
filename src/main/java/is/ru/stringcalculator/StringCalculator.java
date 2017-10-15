@@ -17,8 +17,8 @@ public class StringCalculator{
 	private int getSum(String number){
 		int sum = 0;
 		String errorString = "Negatives not allowed: ";
-		boolean throwError = false;
-		String delimiterRegex = ",|\\n| ";
+		boolean throwError = false; // Boolean value if we have an error, used so we can loop through all numbers before exception is thrown
+		String delimiterRegex = ",|\\n| "; // Default delimiter regex
 
 		if(chosenDelimiter(number)){
 			delimiterRegex = getDelimiter(number);
@@ -46,6 +46,7 @@ public class StringCalculator{
 		//Return our sum
 		return sum;
 	}
+
 	private void throwIllegalArgumentExc(String errormsg){
 		throw new IllegalArgumentException(errormsg);
 	}
