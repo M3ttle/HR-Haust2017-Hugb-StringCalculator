@@ -64,12 +64,12 @@ public class StringCalculatorTest{
 	@Test
 	public void addThreeNumbersSpace1(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(9, calc.Add("1 2 4"));
+		assertEquals(7, calc.Add("1 2 4"));
 	}
 	@Test
 	public void addThreeNumbersSpace2(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(9, calc.Add("5\n1 4,2"));
+		assertEquals(12, calc.Add("5\n1 4,2"));
 	}
 
 }
