@@ -29,7 +29,9 @@ public class StringCalculator{
 				errorString += tempnumber;
 				throwError = true;
 			}
-			sum += tempnumber;
+			else if(tempnumber <= 1000){ // Numbers bigger than 1000 are ignored
+				sum += tempnumber;
+			}
 		}
 		if(throwError){
 			throwIllegalArgumentExc(errorString);

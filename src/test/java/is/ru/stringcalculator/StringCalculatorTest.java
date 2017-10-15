@@ -72,6 +72,7 @@ public class StringCalculatorTest{
 		assertEquals(12, calc.Add("5\n1 4,2"));
 	}
 
+	// Test negative values
 	@Test
 	public void testNegativeOneNumber(){
 		  try
@@ -108,5 +109,13 @@ public class StringCalculatorTest{
 		  {
 		    assertEquals("Negatives not allowed: -4,-5", e.getMessage());
 		  }
+	}
+
+
+	// Numbers bigger than 1000 should be ignored
+	@Test
+	public void addNumberAbove1k(){
+		StringCalculator calc = new StringCalculator();
+		assertEquals(2, calc.Add("3 1500 2000 5"));
 	}
 }
