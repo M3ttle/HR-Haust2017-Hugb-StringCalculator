@@ -5,12 +5,14 @@ import org.junit.Test;
 
 public class StringCalculatorTest{
 
+	// Test an empty string
 	@Test
 	public void addEmptyString(){
 		StringCalculator calc = new StringCalculator();
 		assertEquals(0, calc.Add(""));
 	}
 
+	// Test out two differect one number values
 	@Test
 	public void addNumberOne(){
 		StringCalculator calc = new StringCalculator();
@@ -21,4 +23,17 @@ public class StringCalculatorTest{
 		StringCalculator calc = new StringCalculator();
 		assertEquals(2, calc.Add("2"));
 	}
+
+	// Test two numbers
+	@Test
+	public void addTwoNumbers1(){
+		StringCalculator calc = new StringCalculator();
+		assertEquals(10, calc.Add("9,2"));
+	}
+	@Test
+	public void addTwoNumbers2(){
+		StringCalculator calc = new StringCalculator();
+		assertEquals(15, calc.Add("5,6"));
+	}
+
 }
