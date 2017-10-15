@@ -5,8 +5,8 @@ Autumn 2017</br>
 A simple Git project</br>
 
 Instructor: Hannes Pétursson
-
 </br>
+Student: Jón Pétur Jónsson / jonpj16
 </br>TDD Exercise
 </br>Purpose
 </br>Learn to use Test Driven Development to create a program.
