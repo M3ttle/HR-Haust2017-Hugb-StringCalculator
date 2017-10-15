@@ -32,8 +32,12 @@ public class StringCalculator{
 			sum += tempnumber;
 		}
 		if(throwError){
-			throw new IllegalArgumentException(errorString);
+			throwIllegalArgumentExc(errorString);
 		}
 		return sum;
+	}
+
+	private void throwIllegalArgumentExc(String errormsg){
+		throw new IllegalArgumentException(errormsg);
 	}
 }
