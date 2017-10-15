@@ -8,6 +8,6 @@ public class StringCalculatorTest{
 	@Test
 	public void addEmptyString(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(-1, calc.Add(""));
+		assertEquals(0, calc.Add(""));
 	}
 }
