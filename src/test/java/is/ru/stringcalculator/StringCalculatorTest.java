@@ -118,4 +118,11 @@ public class StringCalculatorTest{
 		StringCalculator calc = new StringCalculator();
 		assertEquals(8, calc.Add("3 1500 2000 5"));
 	}
+
+	// Test a new delimeter in when calling add
+	@Test
+	public void addChangeDelimiter(){
+		StringCalculator calc = new StringCalculator();
+		assertEquals(3, calc.Add("//;\n1;2"));
+	}
 }
