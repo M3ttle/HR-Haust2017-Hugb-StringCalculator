@@ -36,4 +36,16 @@ public class StringCalculatorTest{
 		assertEquals(11, calc.Add("5,6"));
 	}
 
+	//Test three numbers
+	@Test
+	public void addThreeNumbers1(){
+		StringCalculator calc = new StringCalculator();
+		assertEquals(11, calc.Add("1,2,3"));
+	}
+	@Test
+	public void addThreeNumbers2(){
+		StringCalculator calc = new StringCalculator();
+		assertEquals(11, calc.Add("5,1,2"));
+	}
+
 }
