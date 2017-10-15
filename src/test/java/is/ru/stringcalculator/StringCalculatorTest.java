@@ -93,7 +93,7 @@ public class StringCalculatorTest{
 		  }
 		  catch(final IllegalArgumentException e)
 		  {
-		    assertEquals("Negatives not allowed: -2", e.getMessage());
+		    assertEquals("Negatives not allowed: -1", e.getMessage());
 		  }
 	}
 }
