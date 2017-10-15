@@ -13,51 +13,52 @@ public class StringCalculator{
 		return getSum(numbers);
 	}
 
+	// Helper functions
 	private int getSum(String number){
 		int sum = 0;
 		String errorString = "Negatives not allowed: ";
 		boolean throwError = false;
-
 		String delimiterRegex = ",|\\n| ";
 
-		System.out.println("Number before: " + number );
-
-
-		if(number.charAt(0) == '/' && number.charAt(1) == '/'){
-			delimiterRegex = number.substring(2, number.indexOf("\n"));
-			int wordLength = number.length();
-			number = number.substring(number.indexOf("\n") + 1, wordLength);
+		if(chosenDelimiter(number)){
+			delimiterRegex = getDelimiter(number);
+			number = cutStringFromNewLine(number);
 		}
 
-
-		System.out.println("deliReg: " + delimiterRegex );
-		System.out.println("Number: " + number );
-
-
 		for(String numb : number.split(delimiterRegex)){
-			int tempnumber = Integer.parseInt(numb);
+			int workingNumber = Integer.parseInt(numb);
 			// If we have a negative value
-			if(tempnumber < 0){
+			if(workingNumber < 0){
 				// If we have been here before we add a comma before our number
 				if(throwError){
 					errorString += ",";
 				}
-				errorString += tempnumber;
+				errorString += workingNumber;
 				throwError = true;
 			}
-			else if(tempnumber <= 1000){ // Numbers bigger than 1000 are ignored
-				sum += tempnumber;
+			else if(workingNumber <= 1000){ // Numbers bigger than 1000 are ignored
+				sum += workingNumber;
 			}
 		}
 		if(throwError){
 			throwIllegalArgumentExc(errorString);
 		}
-
-		System.out.println("Sum: " + sum);
+		//Return our sum
 		return sum;
 	}
-
 	private void throwIllegalArgumentExc(String errormsg){
 		throw new IllegalArgumentException(errormsg);
+	}
+	// If our first characters are // we have a special case for delimiter
+	private boolean chosenDelimiter(String number){
+		return (number.charAt(0) == '/' && number.charAt(1) == '/');
+	}
+	// Set our delimiterRegex to the correct delimter, stard from index 2 and stop at newLine
+	private String getDelimiter(String number){
+		return number.substring(2, number.indexOf("\n"));
+	}
+	// Remove the first line from the number, so we end up with our numbers and delimiter
+	private String cutStringFromNewLine(String number){
+		return number.substring(number.indexOf("\n") + 1, number.length());
 	}
 }
