@@ -15,8 +15,19 @@ public class StringCalculator{
 
 	private int getSum(String number){
 		int sum = 0;
+		String errorString = "Negatives not allowed: ";
+		boolean throwError = false;
+
 		for(String numb : number.split(",|\\n| ")){
-			sum += Integer.parseInt(numb);
+			int tempnumber = Integer.parseInt(numb);
+			if(tempnumber < 0){
+				errorString += tempnumber;
+				throwError = true;
+			}
+			sum += tempnumber;
+		}
+		if(throwError){
+			throw new IllegalArgumentException(errorString);
 		}
 		return sum;
 	}
