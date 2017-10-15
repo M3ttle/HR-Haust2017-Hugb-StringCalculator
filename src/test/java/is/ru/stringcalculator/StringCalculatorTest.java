@@ -116,6 +116,6 @@ public class StringCalculatorTest{
 	@Test
 	public void addNumberAbove1k(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(2, calc.Add("3 1500 2000 5"));
+		assertEquals(8, calc.Add("3 1500 2000 5"));
 	}
 }
