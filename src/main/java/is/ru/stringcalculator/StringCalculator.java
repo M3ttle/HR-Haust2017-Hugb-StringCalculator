@@ -18,7 +18,23 @@ public class StringCalculator{
 		String errorString = "Negatives not allowed: ";
 		boolean throwError = false;
 
-		for(String numb : number.split(",|\\n| ")){
+		String delimiterRegex = ",|\\n| ";
+
+		System.out.println("Number before: " + number );
+
+
+		if(number.charAt(0) == '/' && number.charAt(1) == '/'){
+			delimiterRegex = number.substring(2, number.indexOf("\n"));
+			int wordLength = number.length();
+			number = number.substring(number.indexOf("\n") + 1, wordLength);
+		}
+
+
+		System.out.println("deliReg: " + delimiterRegex );
+		System.out.println("Number: " + number );
+
+
+		for(String numb : number.split(delimiterRegex)){
 			int tempnumber = Integer.parseInt(numb);
 			// If we have a negative value
 			if(tempnumber < 0){
@@ -36,6 +52,8 @@ public class StringCalculator{
 		if(throwError){
 			throwIllegalArgumentExc(errorString);
 		}
+
+		System.out.println("Sum: " + sum);
 		return sum;
 	}
 
