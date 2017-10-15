@@ -9,6 +9,13 @@ public class StringCalculator{
 		if(numbers == ""){
 			return 0;
 		}
-		return -1;
+		// If numbers is not empty we continue.
+		String[] splittedNumbers = numbers.split(",");
+		int sum = 0;
+		for(String numb : splittedNumbers){
+			sum += Integer.parseInt(numb);
+		}
+
+		return sum;
 	}
 }
