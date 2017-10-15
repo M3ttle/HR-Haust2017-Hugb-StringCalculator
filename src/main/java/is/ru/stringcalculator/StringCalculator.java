@@ -22,6 +22,10 @@ public class StringCalculator{
 			int tempnumber = Integer.parseInt(numb);
 			// If we have a negative value
 			if(tempnumber < 0){
+				// If we have been here before we add a comma before our number
+				if(throwError){
+					errorString += ",";
+				}
 				errorString += tempnumber;
 				throwError = true;
 			}
