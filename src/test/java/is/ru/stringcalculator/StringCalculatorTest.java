@@ -40,12 +40,12 @@ public class StringCalculatorTest{
 	@Test
 	public void addThreeNumbers1(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(11, calc.Add("1,2,3"));
+		assertEquals(6, calc.Add("1,2,3"));
 	}
 	@Test
 	public void addThreeNumbers2(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(11, calc.Add("5,1,2"));
+		assertEquals(8, calc.Add("5,1,2"));
 	}
 
 }
