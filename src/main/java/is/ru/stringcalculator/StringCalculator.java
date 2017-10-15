@@ -20,6 +20,7 @@ public class StringCalculator{
 
 		for(String numb : number.split(",|\\n| ")){
 			int tempnumber = Integer.parseInt(numb);
+			// If we have a negative value
 			if(tempnumber < 0){
 				errorString += tempnumber;
 				throwError = true;

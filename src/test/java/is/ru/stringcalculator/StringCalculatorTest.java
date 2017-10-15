@@ -84,4 +84,16 @@ public class StringCalculatorTest{
 		    assertEquals("Negatives not allowed: -5", e.getMessage());
 		  }
 	}
+	@Test
+	public void testNegativeTwoNumbers(){
+		  try
+		  {
+		  	StringCalculator calc = new StringCalculator();
+		  	calc.Add("-1,2");
+		  }
+		  catch(final IllegalArgumentException e)
+		  {
+		    assertEquals("Negatives not allowed: -2", e.getMessage());
+		  }
+	}
 }
