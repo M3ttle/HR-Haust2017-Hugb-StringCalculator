@@ -52,12 +52,12 @@ public class StringCalculatorTest{
 	@Test
 	public void addThreeNumbersNewLine1(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(7, calc.Add("1\n2,3"));
+		assertEquals(6, calc.Add("1\n2,3"));
 	}
 	@Test
 	public void addThreeNumbersNewLine2(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(9, calc.Add("5\n1\n4"));
+		assertEquals(10, calc.Add("5\n1\n4"));
 	}
 
 }
