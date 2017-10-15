@@ -123,11 +123,11 @@ public class StringCalculatorTest{
 	@Test
 	public void addChangeDelimiter(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(4, calc.Add("//;\n1;2"));
+		assertEquals(3, calc.Add("//;\n1;2"));
 	}
 	@Test
 	public void addChangeDelimiter2(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(5, calc.Add("//asdf\n1asdf2"));
+		assertEquals(3, calc.Add("//asdf\n1asdf2"));
 	}
 }
