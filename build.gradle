@@ -10,7 +10,7 @@
 apply plugin: 'java-library'
 apply plugin: 'application'
 				
-mainClassName = 'is.ru.hugb.StringCalculator'
+mainClassName = 'is.ru.stringcalculator.StringCalculator'
 
 // In this section you declare where to find the dependencies of your project
 repositories {

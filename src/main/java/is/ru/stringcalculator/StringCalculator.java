@@ -1,4 +1,4 @@
-package	is.ru.hugb;
+package	is.ru.stringcalculator;
 
 public class StringCalculator{
 	public static void main(String[] args){
