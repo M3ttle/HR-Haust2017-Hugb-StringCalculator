@@ -28,12 +28,12 @@ public class StringCalculatorTest{
 	@Test
 	public void addTwoNumbers1(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(10, calc.Add("9,2"));
+		assertEquals(11, calc.Add("9,2"));
 	}
 	@Test
 	public void addTwoNumbers2(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(15, calc.Add("5,6"));
+		assertEquals(11, calc.Add("5,6"));
 	}
 
 }
