@@ -14,11 +14,11 @@ public class StringCalculatorTest{
 	@Test
 	public void addNumberOne(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(3, calc.Add("1"));
+		assertEquals(1, calc.Add("1"));
 	}
 	@Test
 	public void addNumberTwo(){
 		StringCalculator calc = new StringCalculator();
-		assertEquals(4, calc.Add("2"));
+		assertEquals(2, calc.Add("2"));
 	}
 }
